@@ -6,3 +6,7 @@ alias gc="git commit -m"
 alias gh="git push"
 alias gp="git pull"
 alias gd="git diff"
+
+transfer() {
+    curl --upload-file ./"$1" https://transfer.sh/"$1"
+}

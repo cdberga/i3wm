@@ -1,0 +1,7 @@
+alias searchpr="ps -ef | grep"
+alias his="history"
+alias gs="git status"
+alias ga="git add"
+alias gc="git commit -m"
+alias gh="git push"
+alias gp="git pull"

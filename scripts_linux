@@ -1,0 +1,8 @@
+# Checar drives montados
+lsblk
+
+# Gravar imagem no pendrive
+sudo dd if=/home/carlos/Downloads/Fedora-Workstation-Live-x86_64-30-1.2.iso of=/dev/sdc bs=4M
+
+#Zerar pendrive
+sudo dd if=/dev/zero of=/dev/sdc bs=1M status=progress

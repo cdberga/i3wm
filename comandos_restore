@@ -1,0 +1,4 @@
+ln -s $MY_HOME/eclipse/jee-neon2/eclipse/eclipse /usr/bin/eclipse
+ln -s /media/carlos/hd/carlos/ambienteDesenv/programas/idea-IC-172.4343.14/bin/idea.sh /usr/bin/ij
+ln -s /media/carlos/hd/carlos/ambienteDesenv/programas/Postman/Postman /usr/bin/postman
+

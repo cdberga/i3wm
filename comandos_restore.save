@@ -1,0 +1,13 @@
+ln -s $MY_HOME/eclipse/jee-neon2/eclipse/eclipse /usr/bin/eclipse
+ln -s   124  ln -s /media/carlos/hd/carlos/ambienteDesenv/programas/sts-bundle/sts-3.9.5.RELEASE/STS /usr/bin/sts
+  125  cd ..
+  126  cd ..
+  127  ls
+  128  SQLiteStudio/
+  129  cd SQLiteStudio/
+  130  ls
+  131  ls -la
+  132  ln -s /media/carlos/hd/carlos/ambienteDesenv/programas/SQLiteStudio/sqlitestudio /usr/bin/sql/media/carlos/hd/carlos/ambienteDesenv/programas/idea-IC-172.4343.14/bin/idea.sh /usr/bin/ij
+ln -s /media/carlos/hd/carlos/ambienteDesenv/programas/Postman/Postman /usr/bin/postman
+ln -s /media/carlos/hd/carlos/ambienteDesenv/programas/sts-bundle/sts-3.9.5.RELEASE/STS /usr/bin/sts
+ln -s /media/carlos/hd/carlos/ambienteDesenv/programas/SQLiteStudio/sqlitestudio /usr/bin/sql

@@ -56,7 +56,7 @@ bindsym $mod+Right focus right
 # move focused window
 bindsym $mod+Shift+j move left
 bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
+#bindsym $mod+Shift+l move up
 bindsym $mod+Shift+ccedilla move right
 
 # alternatively, you can use the cursor keys:
@@ -116,18 +116,27 @@ bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
 # applications
-bindsym $mod+F1 exec "thunar"
+bindsym $mod+t exec "thunar"
 bindsym $mod+g exec "google-chrome"
 bindsym $mod+i exec "ij"
 bindsym $mod+p exec "postman"
+bindsym $mod+b exec "brave-browser"
 #bindsym $mod+t exec "/opt/google/chrome/google-chrome --profile-directory=Default --app-id=jlgnjgpggagefdhmnemjcahnfahhdmhc & sleep 2; ~/Downloads/timedoctor-desktop_latest_linux-x86_64.AppImage %U"
 bindsym $mod+l exec "i3lock"
 bindsym $mod+c exec "gedit ~/.config/i3/config"
 #bindsym $mod+Ctrl+g exec "xed ~/Documentos/GB/gh_gbtoken"
 bindsym $mod+Ctrl+x exec "/sbin/shutdown now"
+bindsym $mod+Ctrl+z exec "/sbin/shutdown -r now"
 bindsym $mod+Ctrl+f exec "firefox"
+bindsym $mod+Ctrl+s exec "/home/tiwork/DevEnv/sts-4.5.1.RELEASE/SpringToolSuite4"
 bindsym Print exec "flameshot gui"
+#logout user
+bindsym $mod+Shift+l exec "pkill -KILL -u tiwork"
 # pavucontrol 4 sound
+bindsym XF86AudioMute exec "amixer -D pulse set Master toggle"
+bindsym XF86AudioRaiseVolume exec "amixer -c 0 -q set Master 2dB+"
+bindsym XF86AudioLowerVolume exec "amixer -c 0 -q set Master 2dB-"
+
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -162,8 +171,17 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+exec --no-startup-id nm-applet
+
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3status
+        status_command i3status #-c ~/.config/i3/i3status.conf
+#        status_command i3blocks #-c ~/.config/i3/i3status.conf
+        separator_symbol ⁞
+
+#        tztime local {
+#                format = "%b - %Y.%m.%d %H:%M"
+#                hide_if_equals_localtime = true
+#        }
 }

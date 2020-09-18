@@ -121,6 +121,7 @@ bindsym $mod+g exec "google-chrome"
 bindsym $mod+i exec "ij"
 bindsym $mod+p exec "postman"
 bindsym $mod+b exec "brave-browser"
+bindsym $mod+j exec "java -jar /home/tiwork/DevEnv/apache-jmeter-5.3/bin/ApacheJMeter.jar"
 #bindsym $mod+t exec "/opt/google/chrome/google-chrome --profile-directory=Default --app-id=jlgnjgpggagefdhmnemjcahnfahhdmhc & sleep 2; ~/Downloads/timedoctor-desktop_latest_linux-x86_64.AppImage %U"
 bindsym $mod+l exec "i3lock"
 bindsym $mod+c exec "gedit ~/.config/i3/config"
@@ -136,6 +137,8 @@ bindsym $mod+Shift+l exec "pkill -KILL -u tiwork"
 bindsym XF86AudioMute exec "amixer -D pulse set Master toggle"
 bindsym XF86AudioRaiseVolume exec "amixer -c 0 -q set Master 2dB+"
 bindsym XF86AudioLowerVolume exec "amixer -c 0 -q set Master 2dB-"
+bindsym $mod+Shift+u exec "dm-tool switch-to-greeter"
+bindsym $mod+Ctrl+v exec "/usr/share/code/code --no-sandbox --unity-launch /home/tiwork/wkpy/python_samples/exemplos/"
 
 
 # reload the configuration file
@@ -172,12 +175,13 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 exec --no-startup-id nm-applet
+exec_always ~/.config/i3/startup.sh
+workspace_layout tabbed
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
         status_command i3status #-c ~/.config/i3/i3status.conf
-#        status_command i3blocks #-c ~/.config/i3/i3status.conf
         separator_symbol ⁞
 
 #        tztime local {

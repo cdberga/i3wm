@@ -5,7 +5,10 @@ lsblk
 sudo dd if=/home/carlos/Downloads/Fedora-Workstation-Live-x86_64-30-1.2.iso of=/dev/sdc bs=4M
 
 #Zerar pendrive
-sudo dd if=/dev/zero of=/dev/sdc bs=1M status=progress
+sudo dd if=/dev/zero of=/dev/sdb bs=1M status=progress
+
+# Para ter opção de write no Pendrive escrever no /etc/fstab
+/dev/sdb1 /media/usb auto user,umask=000,utf8,noauto 0 0
 
 # Checar portas utilizadas
 sudo netstat -tlpn

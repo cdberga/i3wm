@@ -3,6 +3,7 @@ import PIL.Image
 import PIL.ImageFont
 import PIL.ImageOps
 import PIL.ImageDraw
+import os
 
 PIXEL_ON = 255  # PIL color to use for "on"
 PIXEL_OFF = 0  # PIL color to use for "off"
@@ -11,8 +12,13 @@ END_READING = "### End Read for Desktop Image ###"
 CHANGE_STRING_LIST = [("bindsym ", ""), ("$mod", "Win"), (" exec ", " => ")]
 
 def main():
-    image = text_image('/home/tiwork/.config/i3/config', '/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf')
-    image.save('/home/tiwork/.config/i3/desktop.png')
+
+    if os.environ.get('I3_ENV') == 'home':
+        image = text_image('/home/tiwork/.config/i3/config', '/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf')
+        image.save('/home/tiwork/.config/i3/desktop.png')
+    elif os.environ.get('I3_ENV') == 'work':
+        image = text_image('/home/carlosbergamasco/.config/i3/config', '/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf')
+        image.save('/home/carlosbergamasco/.config/i3/desktop.png')
 
 def command_filter(line, prev_line):
     for item in CHANGE_STRING_LIST:

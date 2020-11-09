@@ -134,7 +134,7 @@ bindsym Print exec "flameshot gui"
 # Lock Screen
 bindsym $mod+l exec "i3lock"
 # Edit i3 config file
-bindsym $mod+c exec "gedit /home/carlosbergamasco/.config/i3/config"
+bindsym $mod+c exec "gedit /home/carlosbergamasco/.config/i3/config_work"
 bindsym $mod+Ctrl+x exec "/sbin/shutdown now"
 # Restart
 bindsym $mod+Ctrl+z exec "/sbin/shutdown -r now"
@@ -148,7 +148,7 @@ bindsym XF86AudioMute exec "amixer -D pulse set Master toggle"
 bindsym XF86AudioRaiseVolume exec "amixer -c 0 -q set Master 2dB+"
 bindsym XF86AudioLowerVolume exec "amixer -c 0 -q set Master 2dB-"
 bindsym $mod+Shift+u exec "dm-tool switch-to-greeter"
-bindsym $mod+Ctrl+v exec "/usr/share/code/code --no-sandbox --unity-launch /home/carlosbergamasco/wkpy/python_samples/exemplos/"
+#bindsym $mod+Ctrl+v exec "/usr/share/code/code
 
 
 
@@ -188,7 +188,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 exec --no-startup-id nm-applet
-exec_always /home/carlosbergamasco/.config/i3/startup.sh
+exec_always ~/.config/i3/startup_work.sh
 workspace_layout tabbed
 
 # Start i3bar to display a workspace bar (plus the system information i3status

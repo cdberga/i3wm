@@ -12,3 +12,9 @@ sudo dd if=/dev/zero of=/dev/sdb bs=1M status=progress
 
 # Checar portas utilizadas
 sudo netstat -tlpn
+
+# Change date and time
+timedatectl set-time '2020-04-07 11:20:15
+
+# set automatic off
+sudo timedatectl set-ntp off

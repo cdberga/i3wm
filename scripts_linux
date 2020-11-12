@@ -16,5 +16,5 @@ sudo netstat -tlpn
 # Change date and time
 timedatectl set-time '2020-04-07 11:20:15
 
-# set automatic off
+# set automatic date off
 sudo timedatectl set-ntp off

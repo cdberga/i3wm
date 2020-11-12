@@ -202,3 +202,4 @@ bar {
 #                hide_if_equals_localtime = true
 #        }
 }
+exec numlockx on

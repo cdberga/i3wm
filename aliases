@@ -9,6 +9,9 @@ alias dif="git diff"
 alias rst="git reset HEAD"
 alias mci="mvn clean install"
 alias msr="mvn spring-boot:run"
+alias procs="ps -ef"
+alias proc="ps -ef | grep"
+alias addcommit="git add . && git commit -m ${1}"
 
 transfer() {
     curl --upload-file ./"$1" https://transfer.sh/"$1"

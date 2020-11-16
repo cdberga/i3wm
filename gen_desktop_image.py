@@ -55,6 +55,9 @@ def get_eligible_lines(arr):
     return lines_list
 
 def text_image(text_path, font_path=None):
+
+    fptr = open('log', 'w')
+
     """Convert text file to a grayscale image with black characters on a white background.
 
     arguments:
@@ -63,7 +66,7 @@ def text_image(text_path, font_path=None):
     """
     grayscale = 'L'
     # parse the file into lines
-    print("The path: " + text_path)
+    fptr.write("\nThe path: " + text_path)
     with open(text_path) as text_file:  # can throw FileNotFoundError
         lines = tuple(l.rstrip() for l in get_eligible_lines(text_file.readlines()))
 
@@ -74,7 +77,7 @@ def text_image(text_path, font_path=None):
         font = PIL.ImageFont.truetype(font_path, size=large_font)
     except IOError:
         font = PIL.ImageFont.load_default()
-        print('Could not use chosen font. Using default.')
+        fptr.write('\nCould not use chosen font. Using default.')
 
     # make the background image based on the combination of font and lines
     pt2px = lambda pt: int(round(pt * 96.0 / 36))  # convert points to pixels
@@ -84,7 +87,7 @@ def text_image(text_path, font_path=None):
     max_height = pt2px(font.getsize(test_string)[1])
     max_width = pt2px(font.getsize(max_width_line)[0])
 
-    print(len(lines))
+    fptr.write('\n' + str(len(lines)))
     height = max_height * len(lines)  # perfect or a little oversized
     width = int(round(max_width))  # a little oversized
     image = PIL.Image.new(grayscale, (width, height), color=PIXEL_OFF)
@@ -101,6 +104,8 @@ def text_image(text_path, font_path=None):
     # crop the text
     c_box = PIL.ImageOps.invert(image).getbbox()
     image = image.crop(c_box)
+
+    fptr.close()
     return image
 
 

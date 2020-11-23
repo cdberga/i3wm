@@ -138,7 +138,8 @@ bindsym $mod+c exec "gedit /home/carlosbergamasco/.config/i3/config_work"
 bindsym $mod+Ctrl+x exec "/sbin/shutdown now"
 # Restart
 bindsym $mod+Ctrl+z exec "/sbin/shutdown -r now"
-bindsym $mod+Ctrl+f exec "firefox"
+# firefox
+bindsym $mod+Ctrl+f exec "/home/carlosbergamasco/Documents/firefox/firefox"
 # Logout user
 bindsym $mod+Shift+l exec "pkill -KILL -u carlosbergamasco"
 ### End Read for Desktop Image ###

@@ -18,3 +18,9 @@ timedatectl set-time '2020-04-07 11:20:15
 
 # set automatic date off
 sudo timedatectl set-ntp off
+
+# set screen resolution
+xrandr -s 1600x900
+
+# see screen resolution
+xrandr

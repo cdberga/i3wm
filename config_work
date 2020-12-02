@@ -131,15 +131,25 @@ bindsym $mod+Shift+0 move container to workspace 10
 # File Manager
 bindsym $mod+t exec "nautilus"
 bindsym Print exec "flameshot gui"
+# Edit i3 (work) config file
+bindsym $mod+Ctrl+c exec "gedit /home/carlosbergamasco/.config/i3/config_work"
+# Firefox
+bindsym $mod+Ctrl+f exec "/home/carlosbergamasco/Documents/firefox/firefox"
+bindsym $mod+g exec "google-chrome"
+# Gnome Control Center
+bindsym $mod+Ctrl+F12 exec "env XDG_CURRENT_DESKTOP=GNOME gnome-control-center"
+
+# PyCharm
+bindsym $mod+Ctrl+p exec "/home/carlosbergamasco/dev/pycharm-2020.2.3/bin/pycharm.sh"
+# Vs Code
+bindsym $mod+Ctrl+v exec "/usr/bin/code"
+
 # Lock Screen
 bindsym $mod+l exec "i3lock"
-# Edit i3 config file
-bindsym $mod+c exec "gedit /home/carlosbergamasco/.config/i3/config_work"
+# Shutdown Computer
 bindsym $mod+Ctrl+x exec "/sbin/shutdown now"
-# Restart
+# Restart Computer
 bindsym $mod+Ctrl+z exec "/sbin/shutdown -r now"
-# firefox
-bindsym $mod+Ctrl+f exec "/home/carlosbergamasco/Documents/firefox/firefox"
 # Logout user
 bindsym $mod+Shift+l exec "pkill -KILL -u carlosbergamasco"
 ### End Read for Desktop Image ###
@@ -149,7 +159,6 @@ bindsym XF86AudioMute exec "amixer -D pulse set Master toggle"
 bindsym XF86AudioRaiseVolume exec "amixer -c 0 -q set Master 2dB+"
 bindsym XF86AudioLowerVolume exec "amixer -c 0 -q set Master 2dB-"
 bindsym $mod+Shift+u exec "dm-tool switch-to-greeter"
-#bindsym $mod+Ctrl+v exec "/usr/share/code/code
 
 
 
@@ -190,6 +199,7 @@ bindsym $mod+r mode "resize"
 
 exec --no-startup-id nm-applet
 exec_always /home/carlosbergamasco/.config/i3/startup_work.sh
+exec_always xrandr -s 1600x900
 workspace_layout tabbed
 
 # Start i3bar to display a workspace bar (plus the system information i3status

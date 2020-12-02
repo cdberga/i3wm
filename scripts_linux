@@ -24,3 +24,6 @@ xrandr -s 1600x900
 
 # see screen resolution
 xrandr
+
+# set configs Ubuntu / Mint on i3wm
+env XDG_CURRENT_DESKTOP=GNOME gnome-control-center

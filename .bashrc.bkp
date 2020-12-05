@@ -146,5 +146,4 @@ export LOGGI_OPS=/opt/loggi/ops
 export XD=/opt/loggi/ui/targets/xd-app
 export WEB=/opt/loggi/web/
 export PATH=${LOGGI_OPS}/ansible/bin:$PATH
-export PONTO_ADDRESS="Rua Professor Aprigio Gonzaga, 500"
 export I3=$HOME/.config/i3

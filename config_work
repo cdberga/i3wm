@@ -68,6 +68,14 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
+# Go to previous or next workspace
+bindsym $mod+Ctrl+Left workspace prev
+bindsym $mod+Ctrl+Right workspace next
+
+# Move to previous or next workspace
+bindsym $mod+Ctrl+Shift+Left move container to workspace prev; workspace prev
+bindsym $mod+Ctrl+Shift+Right move container to workspace next; workspace next
+
 # split in horizontal orientation
 bindsym $mod+h split h
 

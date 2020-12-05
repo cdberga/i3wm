@@ -5,5 +5,5 @@
 #rm -rf startup_work.sh &&
 #mv startup_w1.sh startup_work.sh
 cp config_$I3_ENV config &
-python3 /home/carlosbergamasco/.config/i3/gen_desktop_image.py &
-feh --bg-scale /home/carlosbergamasco/.config/i3/desktop.png
+python3 $HOME/.config/i3/gen_desktop_image.py &
+feh --bg-scale $HOME/.config/i3/desktop.png

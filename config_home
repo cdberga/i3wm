@@ -154,8 +154,8 @@ bindsym XF86AudioMute exec "amixer -D pulse set Master toggle"
 bindsym XF86AudioRaiseVolume exec "amixer -c 0 -q set Master 2dB+"
 bindsym XF86AudioLowerVolume exec "amixer -c 0 -q set Master 2dB-"
 bindsym $mod+Shift+u exec "dm-tool switch-to-greeter"
-bindsym $mod+Ctrl+v exec "/usr/share/code/code --no-sandbox --unity-launch $HOME/wkpy/python_samples/exemplos/"
-
+#bindsym $mod+Ctrl+v exec "/usr/share/code/code --no-sandbox --unity-launch $HOME/wkpy/python_samples/exemplos/"
+bindsym $mod+Ctrl+v exec "/usr/share/code/code
 
 
 ### Init Read for Desktop Image ###

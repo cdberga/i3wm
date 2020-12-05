@@ -27,3 +27,6 @@ xrandr
 
 # set configs Ubuntu / Mint on i3wm
 env XDG_CURRENT_DESKTOP=GNOME gnome-control-center
+
+# change git remote to ssh
+git remote set-url origin git@github.com:user/repository.git

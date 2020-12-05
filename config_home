@@ -137,13 +137,13 @@ bindsym $mod+b exec "brave-browser"
 # Lock Screen
 bindsym $mod+l exec "i3lock"
 # Edit i3 config file
-bindsym $mod+c exec "gedit /home/tiwork/.config/i3/config"
+bindsym $mod+c exec "gedit $HOME/.config/i3/config"
 bindsym $mod+Ctrl+x exec "/sbin/shutdown now"
 # Restart
 bindsym $mod+Ctrl+z exec "/sbin/shutdown -r now"
 bindsym $mod+Ctrl+f exec "firefox"
 # Spring Tool
-bindsym $mod+Ctrl+s exec "/home/tiwork/DevEnv/sts-4.5.1.RELEASE/SpringToolSuite4"
+bindsym $mod+Ctrl+s exec "$HOME/DevEnv/sts-4.5.1.RELEASE/SpringToolSuite4"
 bindsym Print exec "flameshot gui"
 # Logout user
 bindsym $mod+Shift+l exec "pkill -KILL -u tiwork"
@@ -154,7 +154,7 @@ bindsym XF86AudioMute exec "amixer -D pulse set Master toggle"
 bindsym XF86AudioRaiseVolume exec "amixer -c 0 -q set Master 2dB+"
 bindsym XF86AudioLowerVolume exec "amixer -c 0 -q set Master 2dB-"
 bindsym $mod+Shift+u exec "dm-tool switch-to-greeter"
-bindsym $mod+Ctrl+v exec "/usr/share/code/code --no-sandbox --unity-launch /home/tiwork/wkpy/python_samples/exemplos/"
+bindsym $mod+Ctrl+v exec "/usr/share/code/code --no-sandbox --unity-launch $HOME/wkpy/python_samples/exemplos/"
 
 
 

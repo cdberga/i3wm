@@ -15,7 +15,7 @@
 #exec xed ~/leitura &
 #exec xed ~/Documents/study_viaVarejo &
 #exec google-chrome-stable & 
-#exec xreader "/home/tiwork/Documents/books/O Universo Autoconsciente - Amit Goswami.pdf" &
+#exec xreader "$HOME/Documents/books/O Universo Autoconsciente - Amit Goswami.pdf" &
 #exec google-chrome-stable & 
 exec python3 ~/.config/i3/gen_desktop_image.py &
 feh --bg-scale ~/.config/i3/desktop.png &

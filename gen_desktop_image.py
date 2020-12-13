@@ -13,8 +13,9 @@ CHANGE_STRING_LIST = [("bindsym ", ""), ("$mod", "Win"), (" exec ", " => ")]
 
 def main():
 
-    image = text_image('$HOME/.config/i3/config', '/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf')
-    image.save('$HOME/.config/i3/desktop.png')
+    home = os.getenv('HOME')
+    image = text_image(str(home) + '/.config/i3/config', '/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf')
+    image.save(str(home) + '/.config/i3/desktop.png')
 
 def command_filter(line, prev_line):
     for item in CHANGE_STRING_LIST:
@@ -70,7 +71,6 @@ def text_image(text_path, font_path=None):
         font = PIL.ImageFont.truetype(font_path, size=large_font)
     except IOError:
         font = PIL.ImageFont.load_default()
-        notify-send 'Could not use chosen font. Using default.'
 
     # make the background image based on the combination of font and lines
     pt2px = lambda pt: int(round(pt * 96.0 / 36))  # convert points to pixels

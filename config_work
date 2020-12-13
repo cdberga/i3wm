@@ -142,7 +142,7 @@ bindsym Print exec "flameshot gui"
 # Record Gif
 bindsym Ctrl+Print exec "$HOME/.config/i3/record-screen.sh"
 # Stop Gif Recording
-bindsym Ctrl+Shift+Print exec "killall ffmpeg"; exec "rm -rf *.mkv"
+bindsym Ctrl+Shift+Print exec "killall ffmpeg"
 # Edit i3 (work) config file
 bindsym $mod+Ctrl+c exec "gedit $HOME/.config/i3/config_work"
 # Firefox

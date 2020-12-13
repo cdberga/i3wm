@@ -139,6 +139,10 @@ bindsym $mod+Shift+0 move container to workspace 10
 # File Manager
 bindsym $mod+t exec "nautilus"
 bindsym Print exec "flameshot gui"
+# Record Gif
+bindsym Ctrl+Print exec "$HOME/.config/i3/record-screen.sh"
+# Stop Gif Recording
+bindsym Ctrl+Shift+Print exec "killall ffmpeg"; exec "rm -rf *.mkv"
 # Edit i3 (work) config file
 bindsym $mod+Ctrl+c exec "gedit $HOME/.config/i3/config_work"
 # Firefox

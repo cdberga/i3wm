@@ -100,7 +100,8 @@ alias commit="git commit -m"
 alias push="git push"
 alias pull="git pull"
 alias dif="git diff"
-alias rst="git reset HEAD"
+alias chk="git checkout"
+alias branch="git branch"
 alias mci="mvn clean install"
 alias msr="mvn spring-boot:run"
 alias procs="ps -ef"
@@ -110,6 +111,8 @@ alias i3w="cd $HOME/.config/i3"
 alias xda="cd /opt/loggi/ui/targets/xd-app"
 alias web="cd /opt/loggi/web"
 alias ops="cd /opt/loggi/ops"
+alias start="npm run start"
+alias tests="npm run test"
 alias adr="adr.sh"
 
 # Add an "alert" alias for long running commands.  Use like so:
@@ -145,5 +148,5 @@ export NVM_DIR="$HOME/.nvm"
 export LOGGI_OPS=/opt/loggi/ops
 export XD=/opt/loggi/ui/targets/xd-app
 export WEB=/opt/loggi/web/
-export PATH=${LOGGI_OPS}/ansible/bin:$PATH
 export I3=$HOME/.config/i3
+export PATH=${LOGGI_OPS}/ansible/bin:$PATH

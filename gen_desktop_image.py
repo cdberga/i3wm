@@ -13,12 +13,9 @@ CHANGE_STRING_LIST = [("bindsym ", ""), ("$mod", "Win"), (" exec ", " => ")]
 
 def main():
 
-    if os.environ.get('I3_ENV') == 'home':
-        image = text_image('/home/tiwork/.config/i3/config', '/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf')
-        image.save('/home/tiwork/.config/i3/desktop.png')
-    elif os.environ.get('I3_ENV') == 'work':
-        image = text_image('/home/carlosbergamasco/.config/i3/config', '/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf')
-        image.save('/home/carlosbergamasco/.config/i3/desktop.png')
+    home = os.getenv('HOME')
+    image = text_image(str(home) + '/.config/i3/config', '/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf')
+    image.save(str(home) + '/.config/i3/desktop.png')
 
 def command_filter(line, prev_line):
     for item in CHANGE_STRING_LIST:
@@ -56,8 +53,6 @@ def get_eligible_lines(arr):
 
 def text_image(text_path, font_path=None):
 
-    fptr = open('log', 'w')
-
     """Convert text file to a grayscale image with black characters on a white background.
 
     arguments:
@@ -66,7 +61,6 @@ def text_image(text_path, font_path=None):
     """
     grayscale = 'L'
     # parse the file into lines
-    fptr.write("\nThe path: " + text_path)
     with open(text_path) as text_file:  # can throw FileNotFoundError
         lines = tuple(l.rstrip() for l in get_eligible_lines(text_file.readlines()))
 
@@ -77,7 +71,6 @@ def text_image(text_path, font_path=None):
         font = PIL.ImageFont.truetype(font_path, size=large_font)
     except IOError:
         font = PIL.ImageFont.load_default()
-        fptr.write('\nCould not use chosen font. Using default.')
 
     # make the background image based on the combination of font and lines
     pt2px = lambda pt: int(round(pt * 96.0 / 36))  # convert points to pixels
@@ -87,7 +80,6 @@ def text_image(text_path, font_path=None):
     max_height = pt2px(font.getsize(test_string)[1])
     max_width = pt2px(font.getsize(max_width_line)[0])
 
-    fptr.write('\n' + str(len(lines)))
     height = max_height * len(lines)  # perfect or a little oversized
     width = int(round(max_width))  # a little oversized
     image = PIL.Image.new(grayscale, (width, height), color=PIXEL_OFF)
@@ -105,7 +97,6 @@ def text_image(text_path, font_path=None):
     c_box = PIL.ImageOps.invert(image).getbbox()
     image = image.crop(c_box)
 
-    fptr.close()
     return image
 
 

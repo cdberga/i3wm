@@ -29,7 +29,7 @@ def command_filter(line, prev_line):
 def add_comment(line, prev_line):
     command = line.split("=>")
     description = prev_line.replace('#', '')
-    return command[0].replace('\n', '') + "=>" + description
+    return description.strip() + " =>" + command[0].replace('\n', '')
 
 def get_eligible_lines(arr):
     is_reading = False

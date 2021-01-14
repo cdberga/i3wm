@@ -132,6 +132,8 @@ bindsym $mod+t exec "thunar"
 bindsym $mod+g exec "google-chrome"
 # IntelliJ
 bindsym $mod+i exec "ij"
+# SQLite
+bindsym $mod+Ctrl+l exec "/home/tiwork/DevEnv/SQLiteStudio/sqlitestudio"
 bindsym $mod+p exec "postman"
 bindsym $mod+b exec "brave-browser"
 # Lock Screen

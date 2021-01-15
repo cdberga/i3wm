@@ -30,3 +30,6 @@ env XDG_CURRENT_DESKTOP=GNOME gnome-control-center
 
 # change git remote to ssh
 git remote set-url origin git@github.com:user/repository.git
+
+# Avoid Ubuntu auto-set microphone volume
+https://askubuntu.com/questions/689209/how-to-disable-microphone-volume-auto-adjustment-in-cisco-webex

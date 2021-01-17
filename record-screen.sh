@@ -1,6 +1,10 @@
 #!/bin/bash
 TMPFILE="$(mktemp -t screencast-XXXXXXX).mkv"
-OUTPUT="$HOME/Pictures/Screencasts/$(date +%F-%H-%M-%S)"
+if [ -d "$HOME/Pictures" ]; then
+  OUTPUT="$HOME/Pictures/screencast-$(date +%F-%H-%M-%S)"
+else
+  OUTPUT="$HOME/Imagens/screencast-$(date +%F-%H-%M-%S)"
+fi
 
 read -r X Y W H G ID < <(slop -f "%x %y %w %h %g %i")
 ffmpeg -f x11grab -s "$W"x"$H" -i :0.0+$X,$Y "$TMPFILE"

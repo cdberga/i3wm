@@ -133,8 +133,8 @@ bindsym $mod+g exec "google-chrome"
 # IntelliJ
 bindsym $mod+i exec "ij"
 # SQLite
-bindsym $mod+Ctrl+l exec "/home/tiwork/DevEnv/SQLiteStudio/sqlitestudio"
-bindsym $mod+p exec "postman"
+bindsym $mod+Ctrl+l exec "$HOME/DevEnv/SQLiteStudio/sqlitestudio"
+bindsym $mod+p exec "$HOME/DevEnv/Postman/Postman"
 bindsym $mod+b exec "brave-browser"
 # Lock Screen
 bindsym $mod+l exec "i3lock"
@@ -147,6 +147,10 @@ bindsym $mod+Ctrl+f exec "firefox"
 # Spring Tool
 bindsym $mod+Ctrl+s exec "$HOME/DevEnv/sts-4.5.1.RELEASE/SpringToolSuite4"
 bindsym Print exec "flameshot gui"
+# Record Gif
+bindsym Ctrl+Print exec "$HOME/.config/i3/record-screen.sh"
+# Stop Gif Recording
+bindsym Ctrl+Shift+Print exec "killall ffmpeg"
 # Logout user
 bindsym $mod+Shift+l exec "pkill -KILL -u tiwork"
 ### End Read for Desktop Image ###
@@ -165,6 +169,8 @@ bindsym $mod+Ctrl+v exec "/usr/share/code/code
 bindsym $mod+Shift+c "reload"
 # restart i3 # inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r "restart"
+# Edit i3 (Home) config file
+bindsym $mod+Ctrl+c exec "xed $HOME/.config/i3/config_home"
 # exit i3 #(logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 ### End Read for Desktop Image ###

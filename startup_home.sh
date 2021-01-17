@@ -20,5 +20,3 @@
 #exec brave-browser &
 exec python3 ~/.config/i3/gen_desktop_image.py &
 feh --bg-scale ~/.config/i3/desktop.png &
-exec xed ~/.config/i3/startup_home.sh &
-exec xed ~/Documents/study &

@@ -1,4 +1,9 @@
 ln -s $MY_HOME/eclipse/jee-neon2/eclipse/eclipse /usr/bin/eclipse &
 ln -s $HOME/ambienteDesenv/programas/idea-IC-172.4343.14/bin/idea.sh /usr/bin/ij &
 ln -s $HOME/ambienteDesenv/programas/Postman/Postman /usr/bin/postman &
+
 sudo apt-get install numlockx
+sudo apt-get install feh
+sudo apt-get install flameshot
+sudo apt-get install ffmpeg
+sudo apt-get install slop

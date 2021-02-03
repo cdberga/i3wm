@@ -1,3 +1,5 @@
 config
 log
 desktop.png
+startup_work.sh
+startup_home.sh

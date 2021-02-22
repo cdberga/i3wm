@@ -127,6 +127,8 @@ bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
 ### Init Read for Desktop Image ###
+# Calculator
+bindsym $mod+c exec "mate-calc"
 # Distro Text Editor
 bindsym $mod+w exec "gedit"
 # File Manager

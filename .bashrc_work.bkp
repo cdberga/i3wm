@@ -88,6 +88,17 @@ fi
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
+export I3_FOLDER=${HOME}/.config/i3
+export I3_ENV=work
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# Unix/Linux
+export LOGGI_OPS=/opt/loggi/ops
+export XD=/opt/loggi/ui/targets/xd-app
+export WEB=/opt/loggi/web/
+export PATH=${LOGGI_OPS}/ansible/bin:$PATH
+
 # some more ls aliases
 alias ll='ls -alF'
 alias la='ls -A'
@@ -108,7 +119,7 @@ alias msr="mvn spring-boot:run"
 alias procs="ps -ef"
 alias proc="ps -ef | grep"
 alias addcommit="git add . && git commit -m ${1}"
-alias i3w="cd $HOME/.config/i3"
+alias i3w="cd ${I3_FOLDER}"
 alias xda="cd /opt/loggi/ui/targets/xd-app"
 alias web="cd /opt/loggi/web"
 alias ops="cd /opt/loggi/ops"
@@ -141,14 +152,3 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export I3_ENV=work
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-# Unix/Linux
-export LOGGI_OPS=/opt/loggi/ops
-export XD=/opt/loggi/ui/targets/xd-app
-export WEB=/opt/loggi/web/
-export I3=$HOME/.config/i3
-export PATH=${LOGGI_OPS}/ansible/bin:$PATH

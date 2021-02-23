@@ -13,9 +13,9 @@ CHANGE_STRING_LIST = [("bindsym ", ""), ("$mod", "Win"), (" exec ", " => ")]
 
 def main():
 
-    home = os.getenv('HOME')
-    image = text_image(str(home) + '/.config/i3/config', '/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf')
-    image.save(str(home) + '/.config/i3/desktop.png')
+    i3home = os.getenv('I3_FOLDER')
+    image = text_image(str(i3home) + '/config', '/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf')
+    image.save(str(i3home) + '/desktop.png')
 
 def command_filter(line, prev_line):
     for item in CHANGE_STRING_LIST:

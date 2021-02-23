@@ -1,3 +1,3 @@
 #!/bin/bash
-feh --bg-scale $HOME/.config/i3/desktop.png &
+feh --bg-scale $I3_FOLDER/desktop.png &
 exec gnome-terminal &

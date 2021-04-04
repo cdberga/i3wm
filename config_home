@@ -94,7 +94,7 @@ bindsym $mod+e layout toggle split
 bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+bindsym $mod+space focus mode_tilling
 
 # focus the parent container
 bindsym $mod+a focus parent
@@ -202,7 +202,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 exec --no-startup-id nm-applet
-exec_always ~/.config/i3/startup_home.sh
+exec_always $HOME/.config/i3/startup_home.sh
 workspace_layout tabbed
 
 # Start i3bar to display a workspace bar (plus the system information i3status
